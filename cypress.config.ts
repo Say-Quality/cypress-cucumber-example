@@ -2,8 +2,8 @@ import { defineConfig } from 'cypress'
 
 export default defineConfig({
   projectId: 'cypress-cucumber-example',
-  viewportWidth: 1024,
-  viewportHeight: 800,
+  viewportWidth: 1280,
+  viewportHeight: 1024,
   chromeWebSecurity: false,
   retries: {
     runMode: 2,

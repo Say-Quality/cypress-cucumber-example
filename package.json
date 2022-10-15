@@ -10,7 +10,7 @@
     "moment": "^2.29.1"
   },
   "scripts": {
-    "test": "cypress-tags run -- -e TAGS='not @PipelineIgnore' --browser chrome ; node cucumber-html-reporter.js",
+    "test": "cypress-tags run -- -e GLOB='cypress/e2e/**/*.feature' TAGS='not @PipelineIgnore' --browser chrome ; node cucumber-html-reporter.js",
     "test:all-browsers": "(cypress-tags run -- -e TAGS='not @PipelineIgnore' --browser chrome ; node cucumber-html-reporter.js) & (cypress-tags run -- -e TAGS='not @PipelineIgnore' --browser firefox ; node cucumber-html-reporter.js) & (cypress-tags run -- -e TAGS='not @PipelineIgnore' --browser edge ; node cucumber-html-reporter.js)",
     "test:dashboard": "cypress run --record --key 52c79aac-76ec-4aee-beaf-54d0c1b8a717",
     "debug": "cypress open",
